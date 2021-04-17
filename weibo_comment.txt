@@ -1,0 +1,57 @@
+微博正文
+--青石--:现在用的manjaro+kde不能双显卡切换，查的方案折腾了好几版，在bumblebee上翻了好几车，最后虽说能切换了，但是nvidia的闭源驱动始终跑不起来，屏幕不亮，只能靠盲输切回intel。linux重装配置太麻烦了，自己玩还没找到个合适的自动化方案，要是有大神给个推荐，大概能省不少事 北京·沙河  显示地图 
+网路冷眼:【How to install Linux + Python on your iPhone using iSH】http://t.cn/A6GzIqDu 如何使用iSH在iPhone上安装Linux + Python？#网路冷眼技术分享[超话]# 网路冷眼的微博视频  
+微博正文
+--青石--:现在用的manjaro+kde不能双显卡切换，查的方案折腾了好几版，在bumblebee上翻了好几车，最后虽说能切换了，但是nvidia的闭源驱动始终跑不起来，屏幕不亮，只能靠盲输切回intel。linux重装配置太麻烦了，自己玩还没找到个合适的自动化方案，要是有大神给个推荐，大概能省不少事 北京·沙河  显示地图 
+网路冷眼:【How to install Linux + Python on your iPhone using iSH】http://t.cn/A6GzIqDu 如何使用iSH在iPhone上安装Linux + Python？#网路冷眼技术分享[超话]# 网路冷眼的微博视频  
+微博正文
+--青石--:现在用的manjaro+kde不能双显卡切换，查的方案折腾了好几版，在bumblebee上翻了好几车，最后虽说能切换了，但是nvidia的闭源驱动始终跑不起来，屏幕不亮，只能靠盲输切回intel。linux重装配置太麻烦了，自己玩还没找到个合适的自动化方案，要是有大神给个推荐，大概能省不少事 北京·沙河  显示地图 
+网路冷眼:【How to install Linux + Python on your iPhone using iSH】http://t.cn/A6GzIqDu 如何使用iSH在iPhone上安装Linux + Python？#网路冷眼技术分享[超话]# 网路冷眼的微博视频  
+微博正文
+熊饼干1900:写论文就是杀死我浪漫细胞的过程，盯着linux无趣的界面，我想着，这怎么浪漫！淦。  
+"爸爸撸你像杀鸡:我想给自己找个男朋友对男友有如下条件:身高180身材好，要擅长Ai、FW、FI、Br、Ae、Pr、Lr、 Au、AW、Id、Ps等软件的使用，精通CSS、 JavaScript、PHP、ASP、C、C++、C#、Java、 Ruby、Perl、Lisp、 python、Objective-C ActionScript、Pascal、 spss、sas，熟悉 Windows、Linux、 Mac、Android、IOS、WP8
+Hellowangrui_:linux  原图 
+外刊IT评论:程序员漫画：该死的linux  详情==> 程序员漫画：该死的linux   原图 
+来福是爱吃香蕉的串串:别说Linux要深入研究下去还真有点难度哈  [组图共6张] 原图 
+Althea030:我宣布linux实验课或将成为我最爱的课之一有人给写题 还可以给手机充电非常舒适  [组图共2张] 原图 
+我想试试到底名字能改多长哈哈:周记8这周是很不顺利的一周 星期一不见了一只耳机加眼睛发炎星期二跟哥哥赛跑被坎绊到摔跤星期三在发脾气星期四一般般星期五是妈妈生日被爸爸妈妈甜到了linux的题好浪漫 zkl每次Linux建文件都要表白（哈哈本来以为猫猫不会在燕五呆着了然后就发现他躺在盆摘上 所以是花花猫好久没见过阿点了  [组图共10张] 原图 
+北京智能佳机器人:视频介绍了PH54-200-S500-R 工业舵机的启动方式（启动配件链接讲解）以及Linux系统下的舵机软件测试讲解。  北京智能佳机器人的微博视频  
+北京智能佳机器人:视频介绍了PH54-200-S500-R 工业舵机的启动方式（启动配件链接讲解）以及Linux系统下的舵机软件测试讲解。  北京智能佳机器人的微博视频  
+lequesiento-:#last炫神[超话]# linux难不难  
+忘仔牛奶耶:本人擅长Ai、Fw、Fl、Br、Ae、Pr、Id、Ps等软件的安装与卸载，精通CSS、JavaScript、PHP、ASP、C、C＋＋、C#、Java、Ruby、Perl、Lisp、python、Objective-C、ActionScript、Pascal、spss、sas等单词的拼写，熟悉Windows、Linux、Mac、Android、IOS、WP8等系统的开关机。欢迎咨询  
+技术最前线:【Linus Torvalds 对内核支持 Rust 提议表态“不讨厌”】软件工程师 Miguel Ojeda 正式发布了 Linux 内核支持 Rust 语言的 RFC 文件，Linux 作者 Linus Torvalds 在内核邮件列表上回应称，他大体上对此“不讨厌（I don't hate it）”。过去几个月内核社区讨论了对内存安全语言 Rust 的支持，在可预见的未来，Rust 语言将最主要用于写内核驱动和部分模块。Linus 认为要支持 Rust 还需要解决一系列问题，称如果会导致内核错误（Kernel Panic）将是不可接受的。 
+程序员的那些事:《80% 的人都不会的 15 个 Linux 实用技巧》：80% 的人都不会的 15 个 Linux 实用技巧  原图 
+weimingtom:在Linux下，还是脚本引擎或者Java比较爽啊，不用考虑动态库的依赖问题，完全绿色版。。。所以为什么还是有很多人用Windows做程序开发，最后才想办法迁移到Linux，因为Windows不爽的地方，Linux也同样存在，只不过Linux太难用了，以至于那些不爽的地方已经不算什么问题了  
+IT发条:如果你正准备从 Windows 10 迁移到 Linux 平台，那么 Zorin OS 是非常不错的选择。该发行版提供了熟悉的用户界面，并预装了大量的实用工具。今天，Zorin OS 16 Beta 版本发布了，更新后的用户界面更加简洁漂亮，小编个人感觉比 Windows 10 要好看很多。  
+开源中国:发布了文章 《研究人员在 npm 组件中发现 Linux 恶意软件》 研究人员在 npm 组件中发现 Linux 恶意软件  
+写代码的吟游诗人:我操里来来，我没用过linux的split命令。不知道我刚刚在想什么把bytes想成了kb。我本来打算的事5G按照2m切割，结果按照1024bytes*2切割。执行了我就去忙其他的了，结果突然收到我虚拟机的告警。好家伙，已经到了命名的split_后面已经3个z了。reboot，然后rm -rf🙈🙈🙈  
+开源中国:发布了文章 《Google 支持将 Rust 引入 Linux 内核开发》 Google 支持将 Rust 引入 Linux 内核开发  
+数造未来:2021年04月16日，星期五1、英伟达：今年显卡供应短缺，价格已失控2、Tt 发布 Peerless Assassin 120 风冷散热器：纯黑涂装，6 热管3、马斯克：星链服务可能将在今年夏季结束 Beta 测试4、Bandook恶意软件同时针对多个国家的不同行业发起了攻击5、Oculus VR 应用已支持订阅模式6、深度复盘：乐视网财务造假十年 贾跃亭是怎么瞒天过海的？7、苹果 iPhone 今日将在魅族商城开售：还要送上亿安全补贴8、又有三款苹果 iPhone 12 新配色手机壳曝光9、微软 Edge 浏览器推出全新儿童模式10、k1s —— 简单的 Kubernetes 仪表板11、雨果奖首次设立 “最佳游戏”奖项，提名名单公布12、研究人员在 npm 组件中发现 Linux 恶意软件13、Verizon 在美国扩充 5G 企业网：覆盖 24 个城市，最高 400Mbps 
+晴空网络:关于服务器安全小知识更改远程端口，win系统常用3389，建议更改；linux系统常用22，建议更改；晴空网络一直坚持安全第一原则，为您的网络安全保驾护航！  
+Apibug:我刚刚发布了新文章：《Linux 获取 ROOT 权限后的维持小技巧》，快来看看吧。详细内容请点击： http://t.cn/A6cXdptj  
+weimingtom:实际上那些企业级的Linux也是有web界面的，类似于路由器的配置网页，所以。。。没事谁愿意去敲命令行，各种打错字，然后误操作（如果是数据库就更是爽到了）。。。  
+_LittlePhoenixLee:被Linux环境配置折磨要die了，反复磨了几天一直困在一个地方走不出来   
+快科技官方:【龙芯自主指令集可“兼容”MIPS/ARM/x86：最多100%性能】龙芯中科发布了LoongArch指令集，这是龙芯自主开发的指令集，有2500多条指令。此外，龙芯还支持翻译其他指令集，龙芯中科的董事长、创始人胡伟武博士就介绍过了，指出LoongArch对MIPS指令的翻译效率是100%性能，对ARM指令翻译的效率是90%性能，对x86的翻译效率是80%性能。不过80%的x86效率是在Linux下实现的，LoongArch还支持Windows下翻译x86，只是效率会降低到70%。 原图 
+weimingtom:我严重怀疑linux下的软链接和动态库so搜索路径（ld.so.conf）是故意用来防止绿色版安装的。。。  
+Linux中国:如何在 Fedora 上安装 Steam | 由于 Steam，你可以在 Linux 上玩成百上千的游戏。 … http://t.cn/A6cX3LQE  [组图共3张] 原图 
+Linux中国:如何在 Fedora 上安装 Steam | 由于 Steam，你可以在 Linux 上玩成百上千的游戏。 … http://t.cn/A6cX3LQE  [组图共3张] 原图 
+Amyborne:希望Linux老师可以慢点说，毕竟嘴只有一个  
+腾讯程序员:#鹅厂技术干货# #linux# #内存# 【初探Linux内存管理（下）】今天承接上一篇，给大家带来Linux内存管理下篇，从物理内存的探测、memblock内存分配器、内核页表、Linux内存管理框架四个方面，带大家初探。上篇链接戳这里：http://t.cn/A6cXE3Ez    初探Linux内存管理（下）  
+科雷娱乐:#欺诈之地# #griftlands#  赏金猎人们！《欺诈之地》现在可以在macOS上运行了！如果您已经拥有游戏，可以从Steam或EGS客户端下载该游戏。如果您在安装或运行游戏时遇到任何问题，请在此处查看我们的技术支持：http://t.cn/A6cXpfAq。如果问题仍然没有解决，或者您发现任何新的错误，请在官方论坛告知我们：http://t.cn/A6cXpfAG，或在游戏中按F8键。祝你们游戏愉快！我们将在五月发布Linux端口，并在不久后宣布发布日期！ 原图 
+白久爱吃巧克力:睡前反思实验室竞争太激烈了acm实验室2000取12我真的每天逼自己做一点自己完全不会的东西算法，信息安全，Linux，java和C/C++等文化课也要搞好痛苦意味着踏出舒适圈每天多学一点，未来会不同虽然但是，我还是想做梦保研名额  
+Linux中国:• 加密货币交易所第一股 Coinbase 上市，创始人致谢中本聪• 华为提供适配套件可以将 App 对 GMS 的依赖替换为 HMS• System76 正在为其 Pop!_OS Linux 开发新桌面#硬核观察# 04.15 Linux中国的微博视频  
+Linuxeden开源社区:【Linus Torvalds 对内核支持 Rust 提议表态“不讨厌”】软件工程师 Miguel Ojeda 正式发布了 Linux 内核支持 Rust 语言的 RFC 文件，Linux 作者 Linus Torvalds 在内核邮件列表上回应称，他大体上对此“不讨厌（I don't hate it）”。过去几个... -->http://t.cn/A6cXLGV4  原图 
+yrd超帅de:大佬都是用Linux和os x的  
+sxlhr:联想服务器这么难装linux  
+rookie-hacker_adan:发现同党``` 英雄所见略同～～～linux c++ && PHP ~~~ 谁方便用谁 这家伙的多进程编码水平不低～～～多线程就很一般了 但是可以抄袭～～～ 疯狂抄袭有木有  [组图共2张] 原图 
+Yuki_Katashima:已经不知道是第多少次重装Linux了 我的心已经冷了  
+濮阳话饺揭女54osHGQW:【游戏试玩】【神奇宝贝】在网上游戏公开测试中会进行为玩家准备的游戏外国媒体公开了3D“口袋妖怪”的MMORPG游戏。目前还处于阿尔法测试阶段。官方立场表明，玩家可以将宠物圈起来，利用他们不同的技能来玩。新的MMO“口袋妖怪”游戏现在正在制作中，以后将进入Windows和Linux的2大系统。预定  
+电脑爱好者:【联发科携手NVIDIA！移动处理器能用RTX30独显了？】日前NVIDIA首席执行官黄仁勋在GTC 2021主题演讲中透露，NVIDIA将与联发科展开合作，授权后者旗下的MT819x SoC使用GeForce RTX 30系列的安培架构GPU，同时双方将还将合作创建用于Chrome OS和Linux PC的参考系统和SDK。  http://t.cn/A6c6eM7v  原图 
+快乐冲浪的好青年:做实验做的我想哭 我想要一个精通Java 计院 操原 计网 数据结构  linux 等的男朋友 我一定会把他当佛一样供起来   
+老燕子穿黑衣:妈的，我这用个linux怎么一堆毛病，这会儿鼠标不行了，光标还能移动，但是对点击没反应  
+Technology-Daren:Parallels今天宣布发布 Parallels Desktop 16.5 for Mac，全面支持 M1 Mac，允许 Windows 10 ARM Insider Preview 和基于 ARM 的 Linux 发行版在 M1 Mac 上以原生速度运行。Parallels表示，在M1 Mac上原生运行Windows 10 ARM Insider Preview虚拟机与配备英特尔酷睿i9处理器、32GB内存和Radeon Pro Vega 20显卡的2019款15英寸MacBook Pro相比性能提高了30%，DirectX 11 性能提高 60%，并且在M1 Mac上Parallels Desktop 16.5的能耗比基于英特尔的最新MacBook Air低2.5倍。除此之外，许多功能已经为 M1 重新设计，包括 Coherence 模式、共享配置文件、Touch Bar 控制和 Mac 键盘布局。任何拥有 Parallels Desktop 16 for Mac 许可证的用户都可以免费获得 Parallels Desktop 16.5 的自动更新。 原图 
+安安全全客客:【linux内核（5.4.81）——KASAN】KASAN是内核用于动态检测内存错误的工具。http://t.cn/A6c6Bldn  原图 
+爱范儿:【Parallels Desktop 支持  Windows 10 ARM】4 月 14 日，Parallels 宣布发布 Parallels Desktop 16.5 for Mac，全面支持 M1 Mac，允许 Windows 10 ARM Insider Preview 和基于 ARM 的 Linux 发行版在 M1 Mac 上以原生速度运行。Parallels 表示，在 M1 Mac 上原生运行 Windows 10 ARM Insider Preview 虚拟机与配备英特尔酷睿 i9 处理器、32GB 内存和 Radeon Pro Vega 20 显卡的 2019 款 15 英寸 MacBook Pro 相比性能提高了 30%，DirectX 11 性能提高 60%，并且在 M1 Mac 上 Parallels Desktop 16.5 的能耗比基于英特尔的最新 MacBook Air 低 2.5 倍。Parallels 工程与支持高级副总裁 Nick Dobrovolskiy 表示：「对于 Mac 用户而言，Apple 的 M1 芯片是一个重大突破。借助 Rosetta 技术，大多数 Mac 应用程序的过渡非常顺利。因此，Parallels 工程师为带有 M1 芯片的 Mac 实现了本机虚拟化支持。这使我们的用户能够享受到最佳的『Mac 上的 Windows』体验。」 [组图共2张] 原图 
+西门吹雪也要啵啵:linux删除文件夹的命令是什么-linux运维-PHP中文网http://t.cn/A6c61Qtp  
+YZL9l9:又回到了被服务器支配的恐惧，完全不会linux语言，还要我管理，自己用不着的软件出问题了还得我来处理，都快成网管了  
+Solitude__w:每周四下午的linux课，好绝望  
