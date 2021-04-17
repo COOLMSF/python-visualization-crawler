@@ -476,7 +476,7 @@ def time_params_formatter(params_time, offset_day=0, offset_hour=-8):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: %s topic" % sys.argv[0])
+        print("Usage: %s topic", .sys.argv[0])
         sys.exit(-1)
 
     # filter = 0 爬取所有微博，filter = 1 爬取原创微博
@@ -485,6 +485,8 @@ if __name__ == '__main__':
     # 程序是从 end_time 到 start_time 这样爬
     # end_time + 1 day + 8 hour
     # start_time + 8hour
+
+    # 时间尽量短一点， 不然到时后分析评论感情的时候会很慢
     start_time, end_time = '2020-10-31-04', '2021-10-31-05'
     if start_time >= end_time:
         raise Exception('start_time 是离现在更远的那个时间，必须小于 end_time')
