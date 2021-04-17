@@ -6,7 +6,8 @@ from imageio import imread
 
 def main(argv):
     if len(argv) != 3:
-        print("Usage:%s %s %s" % (argv[0], "frame.png", "data_stource"))
+        print("Usage:%s %s %s" % (argv[0], "frame.png", "data_stource.txt"))
+        print("For example: python wordCloud.py ./OIP.jpg ./weibo_comment.txt")
         sys.exit(-1)
 
     frame_png = argv[1]
