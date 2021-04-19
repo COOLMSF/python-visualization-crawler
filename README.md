@@ -4,5 +4,5 @@ This is dev branch.
 Usage:
 python start.py
 
-This project is forked from https://github.com/Python3Spiders/WeiboSuperSpider.
-Thanks to its authors.
+Thanks to https://github.com/Python3Spiders/WeiboSuperSpider and its author.
+Thanks to https://github.com/AaronJny/DeepLearningExamples and its author.
