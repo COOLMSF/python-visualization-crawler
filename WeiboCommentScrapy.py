@@ -1,4 +1,5 @@
 import requests
+import os, sys
 requests.packages.urllib3.disable_warnings()
 from lxml import etree
 from datetime import datetime, timedelta
@@ -146,5 +147,9 @@ class WeiboCommentScrapy(Thread):
             sleep(randint(1,5))
 
 if __name__ =="__main__":
-    WeiboCommentScrapy(wid='IaYZIu0Ko')
+    if len(sys.argv) != 2:
+        print("Usage: %s weibo_id" % sys.argv[0])
+        sys.exit(-1)
+    # WeiboCommentScrapy(wid='IaYZIu0Ko')
+    WeiboCommentScrapy(wid=sys.argv[1])
 

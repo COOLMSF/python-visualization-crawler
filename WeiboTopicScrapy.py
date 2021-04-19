@@ -476,7 +476,7 @@ def time_params_formatter(params_time, offset_day=0, offset_hour=-8):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: %s topic", sys.argv[0])
+        print("Usage: %s topic" % sys.argv[0])
         sys.exit(-1)
 
     # filter = 0 爬取所有微博，filter = 1 爬取原创微博
