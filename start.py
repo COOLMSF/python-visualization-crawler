@@ -51,5 +51,6 @@ for top_topic in top_topics:
 
 # Analyze emotion
 # os.system("python write_emotion2csv.py")
-print("Starting analyze emotion, this will cost a lot time!!!")
-subprocess.check_call(['python', 'get_weibo_crawler_data.py'])
+print("Store weibo data and starting analyze emotion, this will cost a lot time!!!")
+# subprocess.check_call(['python', 'get_weibo_crawler_data.py'])
+os.system('python get_weibo_crawler_data.py')

@@ -49,8 +49,8 @@ for topic in all_topics:
 all_topics = temp
 
 
+print("All topics")
 print(all_topics)
-time.sleep(10)
 # Get all posts
 for topic in all_topics:
     os.mkdir(BASE_PATH + "/" + topic)
@@ -72,17 +72,19 @@ for topic in all_topics:
             os.mkdir(BASE_PATH + "/" + topic + "/" + wid)
             # f_comments = open(BASE_PATH + "/" + topic + "/" + wid + "all_comments.txt", "w")
             # check_output returns []byte
-            print("Starting to crawl : %s" % wid)
+            print("Starting to crawl post: %s" % wid)
             # subprocess.check_output(['python', 'WeiboTopicScrapy.py', wid])
             # cmd = "python WeiboTopicScrapy.py" + " " + wid
             cmd = [ "python", "WeiboCommentScrapy.py", wid ]
             # process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
+            print("python WeiboCommentScrapy.py %s" + wid)
             process = subprocess.Popen("python WeiboCommentScrapy.py" + " " + wid, shell=True, stdout=subprocess.PIPE)
             process.wait()
-            try:
-                cp_append_file(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv", "comment" + "/" + wid + ".csv")
-            except:
-                print("cp file error")
+            # try:
+            #     cp_append_file(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv", "comment" + "/" + wid + ".csv")
+            # except:
+            #     print("cp file error")
+            cp_append_file(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv", "comment" + "/" + wid + ".csv")
                 # No comment found, do nothing
                 # pass
             # print(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv" + "<-" + "comment" + "/" + wid + ".csv")

@@ -386,7 +386,8 @@ class WeiboTopicScrapy():
         wrote_num = 0
         page1 = 0
         random_pages = random.randint(1, 5)
-        pageNum = 1000000
+        # pageNum = 1000000
+        pageNum = 3
 
         for page in range(1, pageNum):
             print('\n\n第{}页....\n'.format(page))
