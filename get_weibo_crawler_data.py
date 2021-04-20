@@ -7,8 +7,8 @@ BASE_PATH = "weibo_data"
 # Run this script after all crawlers have done their jobs!!!
 
 def cp_append_file(dst, src):
-    f_src = open(src, "r")
-    f_dst = open(dst, "w")
+    f_src = open(src, "r",encoding="utf-8")
+    f_dst = open(dst, "w",encoding="utf-8")
     # Skip the first line
     lines = f_src.readline()
     lines = f_src.readlines()
@@ -17,10 +17,10 @@ def cp_append_file(dst, src):
         comment = line.split(',')[-3]
         # Get comment emotion
         print("Starting to analyze emotion")
-        emotion = subprocess.check_output(['python', 'keras-bert-emotional-classifier/eval.py', comment]).decode('utf-8')
+        emotion = subprocess.check_output(['C:\\Python36\\python.exe', 'keras-bert-emotional-classifier\\eval.py', comment]).decode('utf-8"')
         # Write file
-        print(line + ',' + emotion + '\n')
-        f_dst.write(line + ',' + emotion + '\n')
+        print(line + ',' + emotion + '\\n')
+        f_dst.write(line + ',' + emotion + '\\n')
     f_src.close()
     f_dst.close()
 
@@ -53,8 +53,8 @@ print("All topics")
 print(all_topics)
 # Get all posts
 for topic in all_topics:
-    os.mkdir(BASE_PATH + "/" + topic)
-    f_topic_csv = open("topic/" + topic + ".csv")
+    os.mkdir(BASE_PATH + "\\" + topic)
+    f_topic_csv = open("topic\\" + topic + ".csv",encoding="utf-8")
     # Skip the first line
     lines = f_topic_csv.readline()
     lines = f_topic_csv.readlines()
@@ -67,24 +67,24 @@ for topic in all_topics:
         # We create the weibo post directory using wid(weibo post id)
         # We only need the post that its comment is greater that 1,
         # because we want analyze its emotion using(emotional-classifier)
-        # os.mkdir("weibo_data/" + topic + "/" + wid)
+        # os.mkdir("weibo_data\\" + topic + "\\" + wid)
         if int(comment_num) > 1:
-            os.mkdir(BASE_PATH + "/" + topic + "/" + wid)
-            # f_comments = open(BASE_PATH + "/" + topic + "/" + wid + "all_comments.txt", "w")
+            os.mkdir(BASE_PATH + "\\" + topic + "\\" + wid)
+            # f_comments = open(BASE_PATH + "\\" + topic + "\\" + wid + "all_comments.txt", "w")
             # check_output returns []byte
             print("Starting to crawl post: %s" % wid)
             # subprocess.check_output(['python', 'WeiboTopicScrapy.py', wid])
             # cmd = "python WeiboTopicScrapy.py" + " " + wid
             cmd = [ "python", "WeiboCommentScrapy.py", wid ]
             # process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
-            print("python WeiboCommentScrapy.py %s" + wid)
+            print("python WeiboCommentScrapy.py %s" % wid)
             process = subprocess.Popen("python WeiboCommentScrapy.py" + " " + wid, shell=True, stdout=subprocess.PIPE)
             process.wait()
             # try:
-            #     cp_append_file(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv", "comment" + "/" + wid + ".csv")
+            #     cp_append_file(BASE_PATH + "\\" + topic + "\\" + wid + "\\" + "comment" + ".csv", "comment" + "\\" + wid + ".csv")
             # except:
             #     print("cp file error")
-            cp_append_file(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv", "comment" + "/" + wid + ".csv")
+            cp_append_file(BASE_PATH + "\\" + topic + "\\" + wid + "\\" + "comment" + ".csv", "comment" + "\\" + wid + ".csv")
                 # No comment found, do nothing
                 # pass
-            # print(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv" + "<-" + "comment" + "/" + wid + ".csv")
+            # print(BASE_PATH + "\\" + topic + "\\" + wid + "\\" + "comment" + ".csv" + "<-" + "comment" + "\\" + wid + ".csv")

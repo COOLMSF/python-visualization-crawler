@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="static/assets/js/echarts.min.js"></script>
+       <script type="text/javascript" src="static/assets/js/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="static/assets/js/ecStat.min.js"></script>
+       <script type="text/javascript" src="static/assets/js/dataTool.min.js"></script>
+       <script type="text/javascript" src="static/assets/js/china.js"></script>
+       <script type="text/javascript" src="static/assets/js/world.js"></script>
+       <script type="text/javascript" src="static/assets/js/bmap.min.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+var geoCoordMap = {
+'台湾': [121.5135, 25.0308],
+            '黑龙江': [127.9688, 45.368],
+            '内蒙古': [110.3467, 41.4899],
+            "吉林": [125.8154, 44.2584],
+            '北京': [116.4551, 40.2539],
+            "辽宁": [123.1238, 42.1216],
+            "河北": [114.4995, 38.1006],
+            "天津": [117.4219, 39.4189],
+            "山西": [112.3352, 37.9413],
+            "陕西": [109.1162, 34.2004],
+            "甘肃": [103.5901, 36.3043],
+            "宁夏": [106.3586, 38.1775],
+            "青海": [101.4038, 36.8207],
+            "新疆": [87.9236, 43.5883],
+            "西藏": [91.11, 29.97],
+            "四川": [103.9526, 30.7617],
+            "重庆": [108.384366, 30.439702],
+            "山东": [117.1582, 36.8701],
+            "河南": [113.4668, 34.6234],
+            "江苏": [118.8062, 31.9208],
+            "安徽": [117.29, 32.0581],
+            "湖北": [114.3896, 30.6628],
+            "浙江": [119.5313, 29.8773],
+            "福建": [119.4543, 25.9222],
+            "江西": [116.0046, 28.6633],
+            "湖南": [113.0823, 28.2568],
+            "贵州": [106.6992, 26.7682],
+            "云南": [102.9199, 25.4663],
+            "广东": [113.12244, 23.009505],
+            "广西": [108.479, 23.1152],
+            "海南": [110.3893, 19.8516],
+            '上海': [121.4648, 31.2891]
+
+};
+
+var convertData = function (data) {
+    var res = [];
+    for (var i = 0; i < data.length; i++) {
+        var geoCoord = geoCoordMap[data[i].name];
+        if (geoCoord) {
+            res.push(geoCoord.concat(data[i].value));
+        }
+    }
+    return res;
+};
+
+option = {
+    backgroundColor: '#404a59',
+    title: {
+        text: '全国评论量主要城市分布',
+        subtext: '首页',
+        sublink: 'http://127.0.0.1:5000/',
+        left: 'center',
+        textStyle: {
+            color: '#fff'
+        }
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        top: 'bottom',
+        left: 'right',
+        data:['weibo'],
+        textStyle: {
+            color: '#fff'
+        }
+    },
+    visualMap: {
+        min: 0,
+        max: 70000,
+        splitNumber: 20,
+        color: ['#d94e5d','#eac736','#50a3ba'],
+        textStyle: {
+            color: '#fff'
+        }
+    },
+    geo: {
+        map: 'china',
+        label: {
+            emphasis: {
+                show: false
+            }
+        },
+        itemStyle: {
+            normal: {
+                areaColor: '#323c48',
+                borderColor: '#111'
+            },
+            emphasis: {
+                areaColor: '#2a333d'
+            }
+        }
+    },
+    series: [
+        {
+            name: 'topic',
+            type: 'scatter',
+            coordinateSystem: 'geo',
+            data: convertData([
+                   
+					 {% for j,k in addr.items()%}	
+					{name: "{{j}}",value: {{k}}},
+					{% endfor %}
+  
+            ]),
+            symbolSize: 12,
+            label: {
+                normal: {
+                    show: false
+                },
+                emphasis: {
+                    show: false
+                }
+            },
+            itemStyle: {
+                emphasis: {
+                    borderColor: '#fff',
+                    borderWidth: 1
+                }
+            }
+        }
+    ]
+};
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+
+   </body>
+</html>

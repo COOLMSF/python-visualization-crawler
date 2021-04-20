@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="static/assets/js/echarts.min.js"></script>
+
+  <title>微博数据分析</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="temp.html"><span>Logo</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="temp.html"><img src="static/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="/index">首页<i class="la la-angle-down"></i></a></li>
+          <li><a href="/movie">话题评论</a></li>
+          <li><a href="/score">评分</a></li>
+          <li><a href="/word">词云</a></li>
+          <li><a href="/team">更多</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>微博数据分析</h2>
+        </div>
+
+        <!-- ======= Counts Section ======= -->
+    <section class="counts section-bg">
+      <div class="container">
+
+            <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+            <div id="main" style="width: 100%;height:300px"></div>
+            <div id="chart1" style="width:100%; height: 400px;"></div>
+            <div id="chart2" style="width: 100%;height:400px;"></div>
+
+
+      </div>
+    </section><!-- End Counts Section -->
+
+      </div>
+    </section><!-- End Our Team Section -->
+
+ <script type="text/javascript">
+var dom = document.getElementById("main");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+	 title:{
+            text:'评论量前5的用户'
+        },
+    color:['#3398DB'],
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    grid: {
+        left: '1%',
+        right:'4%',
+        bottom:'3%',
+        containLabel:true
+    },
+    xAxis: {
+	    splitNumber: 10,
+        type: 'category',
+        data: {{ score|tojson}}
+        <!--['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun','999'],-->
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: {{ num }},
+        <!--[120, 20, 150, 80, 70, 110, 130,200],-->
+        barWidth:'40%',
+        type:'bar'
+    }]
+};
+
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+
+  var option = {
+        title:{
+            text:'不同时间评论次数'
+        },
+        tooltip:{},
+        legend:{
+            data:['访客来源']
+        },
+        xAxis:{
+		data: {{ score1|tojson}}
+            
+        },
+        yAxis:{
+		
+        },
+        series:[{
+            name:'访问量',
+            type:'line',
+            areaStyle: {
+                normal: {}
+            },
+            data:{{num1}}
+        }]
+    };
+    //初始化echarts实例
+    var myChart = echarts.init(document.getElementById('chart1'));
+
+    //使用制定的配置项和数据显示图表
+    myChart.setOption(option);
+
+    // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('chart2'));
+ 
+        myChart.setOption(
+		
+		{
+		 title: {
+        text: '评论量前5的城市'
+         },
+            series : [
+                {
+                    name: '访问来源',
+                    type: 'pie',    // 设置图表类型为饼图
+                    radius: '55%',  // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+                    data:[          // 数据数组，name 为数据项名称，value 为数据项值
+                        {value:{{num2[0]}}, name:{{score2[0]|tojson}}},
+						{value:{{num2[1]}}, name:{{score2[1]|tojson}}},
+						{value:{{num2[2]}}, name:{{score2[2]|tojson}}},
+						{value:{{num2[3]}}, name:{{score2[3]|tojson}}},
+						{value:{{num2[4]}}, name:{{score2[4]|tojson}}},
+
+                    ]
+                }
+            ]
+        })
+            
+       </script>
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Logo</span></strong>. All Rights Reserved
+      </div>
+    
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="static/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>
