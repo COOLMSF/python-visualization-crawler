@@ -49,13 +49,13 @@ for topic in all_topics:
 all_topics = temp
 
 
+print("All topics\n")
 print(all_topics)
-time.sleep(10)
 # Get all posts
 for topic in all_topics:
     os.mkdir(BASE_PATH + "/" + topic)
     f_topic_csv = open("topic/" + topic + ".csv")
-    # Skip the first line
+    # Skip the first line, the first line is the field name
     lines = f_topic_csv.readline()
     lines = f_topic_csv.readlines()
     for line in lines:
@@ -67,22 +67,16 @@ for topic in all_topics:
         # We create the weibo post directory using wid(weibo post id)
         # We only need the post that its comment is greater that 1,
         # because we want analyze its emotion using(emotional-classifier)
-        # os.mkdir("weibo_data/" + topic + "/" + wid)
         if int(comment_num) > 1:
             os.mkdir(BASE_PATH + "/" + topic + "/" + wid)
-            # f_comments = open(BASE_PATH + "/" + topic + "/" + wid + "all_comments.txt", "w")
-            # check_output returns []byte
-            print("Starting to crawl : %s" % wid)
-            # subprocess.check_output(['python', 'WeiboTopicScrapy.py', wid])
-            # cmd = "python WeiboTopicScrapy.py" + " " + wid
-            cmd = [ "python", "WeiboCommentScrapy.py", wid ]
-            # process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
+            print("Starting to crawl topic:%s post:%s" % (topic, wid))
             process = subprocess.Popen("python WeiboCommentScrapy.py" + " " + wid, shell=True, stdout=subprocess.PIPE)
             process.wait()
-            try:
-                cp_append_file(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv", "comment" + "/" + wid + ".csv")
-            except:
-                print("cp file error")
+            # try:
+            #     cp_append_file(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv", "comment" + "/" + wid + ".csv")
+            # except:
+            #     print("cp file error")
+            cp_append_file(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv", "comment" + "/" + wid + ".csv")
                 # No comment found, do nothing
                 # pass
             # print(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv" + "<-" + "comment" + "/" + wid + ".csv")

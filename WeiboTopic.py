@@ -3,6 +3,8 @@ import requests
 import time
 import sys
 import os
+
+topic_titles = []
  
 def get_hot_topic(page):
     topic_list = []
@@ -46,7 +48,8 @@ def get_hot_topic(page):
                     desc2 = res2.get("data").get("cardlistInfo").get("cardlist_head_cards")[0].get("head_data").get("midtext").split()
                     desc2.reverse()
                     desc2 = " ".join(desc2)
-                print(title, category, desc2.split())
+                # print(title, category, desc2.split())
+                topic_titles.append(title)
                 cv = []
                 for n in desc2.split():
                     if "万" in n:
@@ -70,8 +73,8 @@ def get_hot_topic(page):
                     continue
             #except:
                 #continue
-        time.sleep(2)       
-        print(len(topic_list))
+        # time.sleep(2)       
+        # print(len(topic_list))
     return topic_list
         
 def main():
@@ -79,3 +82,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    for topic_title in topic_titles[0:2]:
+        print(topic_title)
