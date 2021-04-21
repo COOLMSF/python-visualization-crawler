@@ -42,13 +42,13 @@ def score():
     k=0
     con = sqlite3.connect("save.db")
     cur = con.cursor()
-    sql = "select count(NAME) as t,NAME,WB_NUM from users_comments group by NAME order by WB_NUM desc limit 5"
-    sql1 = "select substr(release_time,0,12)  as time ,count(substr(release_time,0,12)) from users_comments group by time limit 4"
+    sql = "select topics as t,sum(WB_NUM) from users_comments  group by topics order by WB_NUM desc limit 5"
+    sql1 = "select release_time  as time ,count(release_time) from users_comments group by time"
     sql2 = "select address,count(address) as t  from users_comments  group by address order by t desc"
     data = cur.execute(sql)
     for item in data:
-        score.append(str(item[1]))
-        num.append(item[2])
+        score.append(str(item[0]))
+        num.append(item[1])
     data1 = cur.execute(sql1)
     for item in data1:
         score1.append(str(item[0]))

@@ -72,29 +72,27 @@
           <table class="table table-striped">
 
               <tr>
-                  <td>编&nbsp号</td>
+                  <td>ID</td>
                   <td>姓名</td>
                   <td>地址</td>
-                  <td>微博数</td>
-                  <td>关注数</td>
-                  <td>粉丝数</td>
                   <td>评论内容</td>
-				  <td>分&nbsp析</td>
+				  <td>分析结果</td>
+				  <td>话题</td>
               </tr>
 
               {% for movie in movies %}
               <tr>
-                  <td>{{movie[0]-1}}</td>
+                  <td>{{movie[0]}}</td>
                   <td>
                       <a href="{{ movie[1] }}" target="_blank">
                       {{ movie[2] }}
                         </a>
                   </td>
                   <td>{{movie[4]}}</td>
-                  <td>{{movie[5]}}</td>
-                  <td>{{movie[6]}}</td>
-                  <td>{{movie[7]}}</td>
+               
                   <td>{{movie[8]}}</td>
+				  <td>{{movie[11]}}</td>
+				  <td>{{movie[12]}}</td>
               </tr>
 
               {% endfor %}

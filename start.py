@@ -7,10 +7,40 @@ import jieba
 from wordcloud import WordCloud
 from imageio import imread
 
-
+BASE_PATH = "weibo_data"
 #csv path
-CSV_FILE_PATH = "weibo_flask\\test.csv"
 
+CSV_FILE_PATH = "weibo_flask\\all_data.csv"
+def write_comment():
+    f_all_data = open("weibo_comment.txt", "w",encoding="utf-8")
+    f_comment = open("weibo_flask\\all_data.csv", 'r',encoding="utf-8")
+    lines = f_comment.readlines()
+    for line in lines:
+        line = line.split(',')[7]
+        f_all_data.write(line + '\n')
+    f_all_data.close()
+def sumerize_all_data():
+    f_all_data = open("weibo_flask" + "\\" + "all_data.csv", "w",encoding="utf-8")
+
+    topics = os.listdir(BASE_PATH)
+    for topic in topics:
+        wids = os.listdir(BASE_PATH + "\\" + topic)
+        for wid in wids:
+            comments = os.listdir(BASE_PATH + "\\" + topic + "\\" + wid)
+            for comment in comments:
+                print("Sumerizing %s %s %s" % (topic, wid, comment))
+                f_comment = open(BASE_PATH + "\\" + topic + "\\" \
+                        + wid + "\\" + comment, 'r',encoding="utf-8")
+                lines = f_comment.readlines()
+                for line in lines:
+                    if len(line) < 3:
+                        continue
+                    # Strip
+                    line = line.strip('\n')
+                    print(line)
+                    f_all_data.write(line + "," + topic + '\n')
+
+    f_all_data.close()
 #save 
 def saveData2DB(datalist,dbpath):
     init_db(dbpath)
@@ -21,7 +51,7 @@ def saveData2DB(datalist,dbpath):
             data[index] = '"'+data[index]+'"'
         sql = '''
                 insert into users_comments (
-                URL,NAME,GENDER,ADDRESS,WB_NUM,FOLLOW,FANS,CONTENT,LIKES,RELEASE_TIME) 
+                URL,NAME,GENDER,ADDRESS,WB_NUM,FOLLOW,FANS,CONTENT,LIKES,RELEASE_TIME,EMOTION,TOPICS) 
                 values(%s)'''%",".join(data)
         print(sql)
         finish(dbpath)
@@ -44,7 +74,10 @@ def init_db(dbpath):
     FANS           INT     ,
     CONTENT           TEXT    ,
     LIKES          INT     ,
-    RELEASE_TIME           TEXT  
+    RELEASE_TIME           TEXT ,
+    EMOTION          TEXT,
+    TOPICS          TEXT 
+
     )'''
    
     conn = sqlite3.connect(dbpath)
@@ -135,7 +168,7 @@ if __name__ == '__main__':
     print("Writing topic\\top_topics.txt done")
     '''
    
-
+    '''
     
     # Make threads/workers
     f_top_topics = open("topic\\top_topics.txt", "r")
@@ -149,16 +182,26 @@ if __name__ == '__main__':
         #process.wait()
         crawler(top_topic)
         
-   
+    '''
+    '''
     # Analyze emotion
     # os.system("python write_emotion2csv.py")
     print("Starting analyze emotion, this will cost a lot time!!!")
     subprocess.check_call(['python', 'get_weibo_crawler_data.py'])
+    '''
+    #sumerize_all_data()
     
+    '''
+    sumerize_all_data()
     # if save.db exists,it is not executed
+    if os.path.isfile("weibo_flask\\save.db"):
+        os.remove("weibo_flask\\save.db")
+
     if not os.path.isfile("weibo_flask\\save.db"):
         csv_to_db(CSV_FILE_PATH)
+        '''
     # generate WordCloud
+    write_comment()
     generateWordCloud("OIP.jpg","weibo_comment.txt","weibo_flask\\static\\assets\\img\\word.jpg")
         
     
