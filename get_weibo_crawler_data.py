@@ -19,6 +19,7 @@ def cp_append_file(dst, src):
         print("Starting to analyze emotion")
         emotion = subprocess.check_output(['python', 'keras-bert-emotional-classifier/eval.py', comment]).decode('utf-8')
         # Write file
+        line = line.split('\n')
         print(line + ',' + emotion + '\n')
         f_dst.write(line + ',' + emotion + '\n')
     f_src.close()
@@ -55,8 +56,6 @@ print(all_topics)
 for topic in all_topics:
     os.mkdir(BASE_PATH + "/" + topic)
     f_topic_csv = open("topic/" + topic + ".csv")
-    # Skip the first line, the first line is the field name
-    lines = f_topic_csv.readline()
     lines = f_topic_csv.readlines()
     for line in lines:
         elements = line.split(',')
