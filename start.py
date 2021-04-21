@@ -136,7 +136,7 @@ if __name__ == '__main__':
     '''
    
 
-    '''
+    
     # Make threads/workers
     f_top_topics = open("topic\\top_topics.txt", "r")
     # Skip the first line
@@ -149,7 +149,7 @@ if __name__ == '__main__':
         #process.wait()
         crawler(top_topic)
         
-    '''
+   
     # Analyze emotion
     # os.system("python write_emotion2csv.py")
     print("Starting analyze emotion, this will cost a lot time!!!")
