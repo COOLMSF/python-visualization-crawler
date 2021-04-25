@@ -17,8 +17,9 @@ def cp_append_file(dst, src,):
         comment = line.split(',')[-3]
         # Get comment emotion
         print("Starting to analyze emotion")
-        emotion = subprocess.check_output(['C:\\Python36\\python.exe', 'keras-bert-emotional-classifier\\eval.py', comment]).decode('gbk')
+        # emotion = subprocess.check_output(['C:\\Python36\\python.exe', 'keras-bert-emotional-classifier\\eval.py', comment]).decode('gbk')
         # Write file
+        emotion = "aaa"
         line=line.split('\n')[0]
         print(line + ',' + emotion + '\n')
         f_dst.write(line + ',' + emotion + '\n')
@@ -59,26 +60,29 @@ for topic in all_topics:
     
     lines = f_topic_csv.readlines()
     for line in lines:
-        elements = line.split(',')
-        wid = elements[0]
-        if not elements[-2].isdigit():
-            continue
-        comment_num = elements[-2]
+        try:
+            elements = line.split(',')
+            wid = elements[0]
+            
+            if not elements[-2].isdigit():
+                continue
+            comment_num = elements[-2]
 
-
-        # We create the weibo post directory using wid(weibo post id)
-        # We only need the post that its comment is greater that 1,
-        # because we want analyze its emotion using(emotional-classifier)
-        if int(comment_num) > 1:
-            os.mkdir(BASE_PATH + "/" + topic + "/" + wid)
-            print("Starting to crawl topic:%s post:%s" % (topic, wid))
-            process = subprocess.Popen("python WeiboCommentScrapy.py" + " " + wid, shell=True, stdout=subprocess.PIPE)
-            process.wait()
-            # try:
-            #     cp_append_file(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv", "comment" + "/" + wid + ".csv")
-            # except:
-            #     print("cp file error")
-            cp_append_file(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv", "comment" + "/" + wid + ".csv")
-                # No comment found, do nothing
-                # pass
-            # print(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv" + "<-" + "comment" + "/" + wid + ".csv")
+                # We create the weibo post directory using wid(weibo post id)
+                # We only need the post that its comment is greater that 1,
+                # because we want analyze its emotion using(emotional-classifier)
+            if int(comment_num) > 1:
+                os.mkdir(BASE_PATH + "/" + topic + "/" + wid)
+                print("Starting to crawl topic:%s post:%s" % (topic, wid))
+                process = subprocess.Popen("python WeiboCommentScrapy.py" + " " + wid, shell=True, stdout=subprocess.PIPE)
+                process.wait()
+                # try:
+                #     cp_append_file(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv", "comment" + "/" + wid + ".csv")
+                # except:
+                #     print("cp file error")
+                cp_append_file(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv", "comment" + "/" + wid + ".csv")
+                    # No comment found, do nothing
+                    # pass
+                # print(BASE_PATH + "/" + topic + "/" + wid + "/" + "comment" + ".csv" + "<-" + "comment" + "/" + wid + ".csv")
+        except Exception:
+            print("err")

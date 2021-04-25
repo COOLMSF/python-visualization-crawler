@@ -75,7 +75,7 @@ def get_hot_topic(page):
     return topic_list
         
 def main():
-    topic_list = get_hot_topic(1)
+    topic_list = get_hot_topic(3)
 
 if __name__ == "__main__":
     main()

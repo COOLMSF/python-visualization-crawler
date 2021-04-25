@@ -51,7 +51,7 @@ def saveData2DB(datalist,dbpath):
             data[index] = '"'+data[index]+'"'
         sql = '''
                 insert into users_comments (
-                URL,NAME,GENDER,ADDRESS,WB_NUM,FOLLOW,FANS,CONTENT,LIKES,RELEASE_TIME,EMOTION,TOPICS) 
+                URL,NAME,GENDER,ADDRESS,WB_NUM,FOLLOW,FANS,CONTENT,LIKES,RELEASE_TIME,EMOTION,TOPICS,classification) 
                 values(%s)'''%",".join(data)
         print(sql)
         finish(dbpath)
@@ -76,7 +76,8 @@ def init_db(dbpath):
     LIKES          INT     ,
     RELEASE_TIME           TEXT ,
     EMOTION          TEXT,
-    TOPICS          TEXT 
+    TOPICS          TEXT,
+    classification          TEXT
 
     )'''
    
@@ -166,9 +167,7 @@ if __name__ == '__main__':
             f_top_topics.write(c + '\n')
     f_top_topics.close()
     print("Writing topic\\top_topics.txt done")
-    '''
-   
-    '''
+
     
     # Make threads/workers
     f_top_topics = open("topic\\top_topics.txt", "r")
@@ -188,22 +187,49 @@ if __name__ == '__main__':
     # os.system("python write_emotion2csv.py")
     print("Starting analyze emotion, this will cost a lot time!!!")
     subprocess.check_call(['python', 'get_weibo_crawler_data.py'])
-    '''
-    #sumerize_all_data()
+   '''
     
+    #sumerize_all_data()
+    #
+    #TextClassifier
     '''
-    sumerize_all_data()
+    list1 = []
+    f_all_data = open("weibo_flask\\all_data.csv","r",encoding="utf-8")
+    lines = f_all_data.readlines()
+    os.chdir("EasyBert")
+    cnt = 0
+    for line in lines:
+        cnt += 1
+        line = line.split(",")[11]
+        print(line)
+        c = subprocess.check_output(["C:\\Python36\\python.exe", "TextClassifier.py", line]).decode('gbk')
+        list1.append(c)
+        
+    os.chdir("..\\")
+    f_all_data.close()
+    f_all_data1 = open("weibo_flask\\all_data.csv","w+",encoding="utf-8")
+    i = 0
+    for line in lines:
+        if i < cnt-1:    
+            line = line.strip("\r\n")        
+            line = line + ","+list1[i]
+            line = line.strip("\r\n")
+            f_all_data1.write(line+"\n")
+        
+    f_all_data1.close()
+    '''
+    
     # if save.db exists,it is not executed
     if os.path.isfile("weibo_flask\\save.db"):
         os.remove("weibo_flask\\save.db")
 
     if not os.path.isfile("weibo_flask\\save.db"):
         csv_to_db(CSV_FILE_PATH)
-        '''
+       
     # generate WordCloud
     write_comment()
     generateWordCloud("OIP.jpg","weibo_comment.txt","weibo_flask\\static\\assets\\img\\word.jpg")
-        
     
+   
 
 
