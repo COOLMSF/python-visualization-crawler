@@ -1,0 +1,14 @@
+# pack-refs with: peeled fully-peeled sorted 
+4b58e04f9e34f403cee9e44fcf964d9a73f9e9ed refs/remotes/origin/development
+f378ae82f7b1b265e299c36356a6843ef2f264fd refs/remotes/origin/master
+4b58e04f9e34f403cee9e44fcf964d9a73f9e9ed refs/remotes/origin/master-vue3
+13a373f16086ba476a8bd5e5e1cd31289c7e72cb refs/tags/V1.0
+^c838f9abc2f09a67252b1f8ffc387ad2d49698f9
+8ce210e9d59b0cfe0eb5f0ba5a62838a84386eb0 refs/tags/V1.1
+^f2b118ed0b0f372db9f8bf4a2fa25227e74d76b6
+bee181452d318ca45bc86ffef4f571a5225d9cea refs/tags/V1.2
+^0a869eeb64a9c105eccb82daae2cd704670a32b4
+9d2af538d799079bab6d63d284f82c536e34388c refs/tags/V1.3
+^89de9fa802b3e62888607509df51d5a8635bc2b3
+c013fbe2a3f7e902a0eac5243b275e035578e8b7 refs/tags/V1.4
+^ec7140ff25ebe85a21f0bdc7bbc927cd82ea08e9
