@@ -18,11 +18,11 @@
       </div>
       <div class="percent">
         <div class="item bg-color-black">
-          <span>今日任务通过率</span>
+          <span>态度积极所占比率</span>
           <CenterChart :id="rate[0].id" :tips="rate[0].tips" :colorObj="rate[0].colorData" />
         </div>
         <div class="item bg-color-black">
-          <span>今日任务达标率</span>
+          <span>其他态度占比率</span>
           <CenterChart :id="rate[1].id" :tips="rate[1].tips" :colorObj="rate[1].colorData" />
         </div>
         <div class="water">
@@ -41,49 +41,49 @@ export default {
     return {
       titleItem: [
         {
-          title: "今年累计任务建次数",
+          title: "微博最多评论次数",
           number: {
-            number: [120],
+            number: [920],
             toFixed: 1,
             content: "{nt}"
           }
         },
         {
-          title: "本月累计任务次数",
+          title: "微博最少评论次数",
           number: {
-            number: [18],
+            number: [0],
             toFixed: 1,
             content: "{nt}"
           }
         },
         {
-          title: "今日累计任务次数",
+          title: "今日最多评论次数",
           number: {
-            number: [2],
+            number: [24],
             toFixed: 1,
             content: "{nt}"
           }
         },
         {
-          title: "今年失败任务次数",
+          title: "今日最少评论次数",
           number: {
-            number: [14],
+            number: [0],
             toFixed: 1,
             content: "{nt}"
           }
         },
         {
-          title: "今年成功任务次数",
+          title: "今年热门话题数量",
           number: {
-            number: [106],
+            number: [981],
             toFixed: 1,
             content: "{nt}"
           }
         },
         {
-          title: "今年达标任务个数",
+          title: "今日热门话题数量",
           number: {
-            number: [100],
+            number: [4],
             toFixed: 1,
             content: "{nt}"
           }
@@ -93,43 +93,31 @@ export default {
         data: [
           {
             name: "周口",
-            value: 55
-          },
-          {
-            name: "南阳",
-            value: 120
-          },
-          {
-            name: "西峡",
-            value: 78
+            value: 72
           },
           {
             name: "驻马店",
             value: 66
           },
           {
-            name: "新乡",
+            name: "丰台",
+            value: 83
+          },
+          {
+            name: "门头沟",
             value: 80
           },
           {
-            name: "新乡2",
-            value: 80
+            name: "东城",
+            value: 93
           },
           {
-            name: "新乡3",
-            value: 80
+            name: "通州",
+            value: 21
           },
           {
-            name: "新乡4",
-            value: 80
-          },
-          {
-            name: "新乡5",
-            value: 80
-          },
-          {
-            name: "新乡6",
-            value: 80
+            name: "军庄",
+            value: 61
           },
         ],
         carousel: "single",

@@ -60,7 +60,7 @@ export default {
           },
           series: [
             {
-              name: "通过率统计",
+              name: "热门话题所占比率",
               type: "pie",
               radius: [10, 60],
               roseType: "area",

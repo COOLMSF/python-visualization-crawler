@@ -10,14 +10,14 @@ export default {
   data () {
     return {
       cdata: {
-        xData: ["rose1", "rose2", "rose3", "rose4", "rose5", "rose6"],
+        xData: ["tin宝", "恋与制作人", "苏芮琪", "黄明昊", "印度新冠", "美国制裁"],
         seriesData: [
-          { value: 10, name: "rose1" },
-          { value: 5, name: "rose2" },
-          { value: 15, name: "rose3" },
-          { value: 25, name: "rose4" },
-          { value: 20, name: "rose5" },
-          { value: 35, name: "rose6" }
+          { value: 10, name: "rtin宝" },
+          { value: 5, name: "恋与制作人" },
+          { value: 15, name: "苏芮琪" },
+          { value: 25, name: "黄明昊" },
+          { value: 20, name: "印度新冠" },
+          { value: 35, name: "美国制裁" }
         ]
       }
     }

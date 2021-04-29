@@ -43,15 +43,15 @@ export default {
         data: [
           {
             name: "周口",
-            value: 55
+            value: 72
           },
           {
             name: "南阳",
-            value: 120
+            value: 167
           },
           {
             name: "西峡",
-            value: 78
+            value: 110
           },
           {
             name: "驻马店",
@@ -63,40 +63,6 @@ export default {
           }
         ]
       },
-      numberData: [
-        {
-          number: {
-            number: [15],
-            toFixed: 1,
-            content: "{nt}"
-          },
-          text: "今日构建总量"
-        },
-        {
-          number: {
-            number: [1144],
-            toFixed: 1,
-            content: "{nt}"
-          },
-          text: "总共完成数量"
-        },
-        {
-          number: {
-            number: [361],
-            toFixed: 1,
-            content: "{nt}"
-          },
-          text: "正在编译数量"
-        },
-        {
-          number: {
-            number: [157],
-            toFixed: 1,
-            content: "{nt}"
-          },
-          text: "未通过数量"
-        }
-      ]
     };
   },
   components: {

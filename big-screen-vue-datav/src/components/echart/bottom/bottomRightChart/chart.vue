@@ -163,19 +163,19 @@ export default {
             },
             indicator: [
               {
-                name: "服务态度",
+                name: "娱乐",
                 max: newData.maxData
               },
               {
-                name: "产品质量",
+                name: "游戏",
                 max: 10
               },
               {
-                name: "任务效率",
+                name: "政治",
                 max: 12
               },
               {
-                name: "售后保障",
+                name: "其他",
                 max: 3.5
               }
             ]

@@ -46,7 +46,7 @@ export default {
             }
           },
           legend: {
-            data: ["已贯通", "计划贯通", "贯通率"],
+            data: ["活微博活跃数", "总微博数", "回帖率(%)"],
             textStyle: {
               color: "#B4B4B4"
             },
@@ -95,7 +95,7 @@ export default {
           ],
           series: [
             {
-              name: "贯通率",
+              name: "回帖率(%)",
               type: "line",
               smooth: true,
               showAllSymbol: true,
@@ -110,7 +110,7 @@ export default {
               data: newData.rateData
             },
             {
-              name: "已贯通",
+              name: "活微博活跃数",
               type: "bar",
               barWidth: 10,
               itemStyle: {
@@ -125,7 +125,7 @@ export default {
               data: newData.barData
             },
             {
-              name: "计划贯通",
+              name: "总微博数",
               type: "bar",
               barGap: "-100%",
               barWidth: 10,

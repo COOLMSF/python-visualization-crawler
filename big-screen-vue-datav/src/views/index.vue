@@ -8,7 +8,7 @@
           <div class="d-flex jc-center">
             <dv-decoration-8 :color="['#568aea', '#000000']" style="width:2.5rem;height:.625rem;" />
             <div class="title">
-              <span class="title-text">大数据可视化平台</span>
+              <span class="title-text">微博爬虫数据分析</span>
               <dv-decoration-6
                 class="title-bototm"
                 :reverse="true"
@@ -33,15 +33,15 @@
               style="width: 6.25rem; text-align: left;background-color: #0f1325;"
             >
               <span class="react-before"></span>
-              <span class="text">数据分析1</span>
+              <span class="text">热门话题所占比率</span>
             </div>
             <div class="react-right ml-3" style="background-color: #0f1325;">
-              <span class="text colorBlue">数据分析2</span>
+              <span class="text colorBlue">福建省评论分布情况</span>
             </div>
           </div>
           <div style="width: 40%" class="d-flex">
             <div class="react-left bg-color-blue mr-3">
-              <span class="text fw-b">vue-big-screen</span>
+              <span class="text fw-b">北京市评论分布情况</span>
             </div>
             <div
               class="react-left mr-4"
