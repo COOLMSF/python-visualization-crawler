@@ -1,0 +1,20 @@
+big-screen-vue-datav web前端程序的文件夹
+comment 所有评论保存在这里
+structure 所有话题和评论的层次结构， 这里面有一个xmind文件， 可以清晰地看到整个爬虫爬下来的结果
+tipic 所有话题存放在这
+weibo_data 爬虫爬下来的所有数据， 见xmind文档
+word_cloud 词云图有关文件
+Cookie.txt cookie
+WeiboTopic.py 爬取热门话题的爬虫
+WeiboTopicScrapy.py 通过话题爬取帖子的爬虫
+WeiboCommentScrapy.py 通过帖子爬取评论的爬虫
+get_weibo_crawler_data.py 将爬虫的到的数据按层次分级
+start.py 从这里开始
+
+about keras bert
+https://github.com/bojone/bert4keras/tree/master/examples
+BERT模型使用bert4keras，开发过程中参考了bert4keras的demo。
+
+Version 3: 模型参数是Google预训练权重BERT-Base, Chinese，
+下载地址https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip
+

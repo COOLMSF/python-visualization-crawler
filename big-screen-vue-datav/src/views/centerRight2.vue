@@ -5,7 +5,7 @@
         <span style="color:#5cd9e8">
           <icon name="align-left"></icon>
         </span>
-        <span class="fs-xl text mx-2">产品销售渠道分析</span>
+        <span class="fs-xl text mx-2">评论人数</span>
       </div>
       <div class="d-flex jc-center body-box" style=" margin-top: 0;">
         <dv-capsule-chart :config="config" style="width: 100%;height:2rem" />

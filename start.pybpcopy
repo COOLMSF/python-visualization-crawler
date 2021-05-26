@@ -1,0 +1,1 @@
+process = subprocess.Popen(['python', 'WeiboTopic.py'], stdout=subprocess.PIPE)

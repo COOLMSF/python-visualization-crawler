@@ -198,7 +198,7 @@ export default {
           },
           // 下方Y轴
           yAxis: {
-            name: "工单",
+            name: "aa",
             nameLocation: "end",
             nameGap: 24,
             nameTextStyle: {
